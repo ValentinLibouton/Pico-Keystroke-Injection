@@ -1,11 +1,14 @@
 import time
 
+from lib.keyboard_layout import StringModeHandler, KeyboardLayoutBE
+
+
 class CommandProcessor:
-    def __init__(self, filename, layout, write_speed=0.03):
+    def __init__(self, filename, write_speed=0.03):
         self.filename = filename
         self.write_speed = write_speed
         self.replay_list = []
-        self.layout = layout
+        self.string_mode_handler = StringModeHandler()
         self.process_commands()
 
     def process_commands(self):
@@ -45,20 +48,14 @@ class CommandProcessor:
             self.comment_mode(line)
         elif line.split()[0] == "REPLAY":
             self.replay_mode(line)
-        else:
-            if line.startswith("(") and line.endswith(")"):
-                combo = line[1:-1].split()
-                self.combo_mode(combo)
-            else:
-                self.command_mode(line)
+        elif line.split()[0] in KeyboardLayoutBE.belgian_layout(): # si c'est une commande dans le dictionnaire et qui n'est pas un caractère
+            self.command_mode(line)
         self.replay_list.append(line)
 
     def string_mode(self, line):
         string = line[7:]
         print(f"String: {string}")
-        for char in string:
-            time.sleep(self.write_speed)
-            self.layout.type_character(char)
+        self.string_mode_handler.string_mode(string=string, write_speed=self.write_speed)
 
     def delay_mode(self, line):
         delay_time = int(line.split()[1])
@@ -71,9 +68,6 @@ class CommandProcessor:
         print(f"Comment: {line}")
 
     def replay_mode(self, line):
-        raise NotImplementedError
-
-    def combo_mode(self, line):
         raise NotImplementedError
 
     def command_mode(self, line):
