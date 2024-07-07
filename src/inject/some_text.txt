@@ -1,0 +1,6 @@
+Example...
+Dear Sir or Madam,
+
+This is the text that will be written
+
+Best regards,
