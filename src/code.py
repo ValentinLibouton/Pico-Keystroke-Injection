@@ -14,9 +14,9 @@ pin.pull = digitalio.Pull.UP
 inject_file = "inject.txt"
 time.sleep(3)
 if not pin.value:
-    if inject_file in os.listdir():
+    if inject_file in os.listdir("./inject"):
 
-        CommandProcessor(filename=inject_file, write_speed=0.001)
+        CommandProcessor(filename="./inject/"+inject_file, write_speed=0.001)
     else:
         print("Inject file does not exist")
 else:
