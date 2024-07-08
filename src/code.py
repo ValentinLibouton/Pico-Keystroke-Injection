@@ -10,14 +10,16 @@ pin = digitalio.DigitalInOut(board.GP10)
 pin.direction = digitalio.Direction.INPUT
 pin.pull = digitalio.Pull.UP
 
-
+number_of_runs = 1
+i = 0
 inject_file = "inject.txt"
-time.sleep(3)
-if not pin.value:
-    if inject_file in os.listdir("./inject"):
-
-        CommandProcessor(filename="./inject/"+inject_file, write_speed=0.001)
+while i < number_of_runs:
+    time.sleep(2)
+    if not pin.value:
+        if inject_file in os.listdir("./inject"):
+            i += 1
+            CommandProcessor(filename="./inject/"+inject_file, write_speed=0.001)
+        else:
+            print("Inject file does not exist")
     else:
-        print("Inject file does not exist")
-else:
-    print("Pin 14 not connected on GND")
+        print("Pin 14 not connected on GND")
