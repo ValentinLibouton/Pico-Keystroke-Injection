@@ -27,30 +27,30 @@ class KeyboardLayoutBE:
             "SPACE": (0x2c,), # ok
             "CAPS_LOCK": (0x39,), # ok
             "F1": (0x3a,), # ok
-            "F2": (0x3b,),
-            "F3": (0x3c,),
-            "F4": (0x3d,),
-            "F5": (0x3e,),
+            "F2": (0x3b,), # ok
+            "F3": (0x3c,), # ok
+            "F4": (0x3d,), # ok
+            "F5": (0x3e,), # ok
             "F6": (0x3f,),
             "F7": (0x40,),
             "F8": (0x41,),
             "F9": (0x42,),
-            "F10": (0x43,),
-            "F11": (0x44,),
+            "F10": (0x43,), # ok
+            "F11": (0x44,), # ok
             "F12": (0x45,),
-            "PRINT_SCREEN": (0x46,),
+            "PRINT_SCREEN": (0x46,), # ok
             "SCROLL_LOCK": (0x47,),
             "PAUSE": (0x48,),
-            "INSERT": (0x49,),
-            "HOME": (0x4a,),
-            "PAGE_UP": (0x4b,),
+            "INSERT": (0x49,), # ok
+            "HOME": (0x4a,), # ok
+            "PAGE_UP": (0x4b,), # ok
             "DELETE": (0x4c,), # ok
-            "END": (0x4d,),
-            "PAGE_DOWN": (0x4e,),
-            "RIGHT_ARROW": (0x4f,),
-            "LEFT_ARROW": (0x50,),
-            "DOWN_ARROW": (0x51,),
-            "UP_ARROW": (0x52,),
+            "END": (0x4d,), # ok
+            "PAGE_DOWN": (0x4e,), # ok
+            "RIGHT_ARROW": (0x4f,), # ok
+            "LEFT_ARROW": (0x50,), # ok
+            "DOWN_ARROW": (0x51,), # ok
+            "UP_ARROW": (0x52,), # ok
             "NUM_LOCK": (0x53,),
             "MENU": (0x65,),
         }
@@ -76,113 +76,113 @@ class KeyboardLayoutBE:
     def char_layout(self):
         """Retourne un dictionnaire de la disposition du clavier belge."""
         return {
-            "a":            (0x14,),
-            "b":            (0x05,),
-            "c":            (0x06,),
-            "d":            (0x07,),
-            "e":            (0x08,),
-            "f":            (0x09,),
-            "g":            (0x0a,),
-            "h":            (0x0b,),
-            "i":            (0x0c,),
-            "j":            (0x0d,),
-            "k":            (0x0e,),
-            "l":            (0x0f,),
-            "m":            (0x33,),
-            "n":            (0x11,),
-            "o":            (0x12,),
-            "p":            (0x13,),
-            "q":            (0x04,),
-            "r":            (0x15,),
-            "s":            (0x16,),
-            "t":            (0x17,),
-            "u":            (0x18,),
-            "v":            (0x19,),
-            "w":            (0x1d,),
-            "x":            (0x1b,),
-            "y":            (0x1c,),
-            "z":            (0x1a,),
-            ",":            (0x10,),
-            "&":            (0x1e,),
-            "é":            (0x1f,),
-            '"':            (0x20,),
-            "'":            (0x21,),
-            "(":            (0x22,),
-            "§":            (0x23,),
-            "è":            (0x24,),
-            "!":            (0x25,),
-            "ç":            (0x26,),
-            "à":            (0x27,),
-            ")":            (0x2d,),
-            "-":            (0x2e,),
-            "^":            ((0x2f,), (0x00,), (0x2f,)),
-            "$":            (0x30,),
-            "µ":            (0x31,),
-            "ù":            (0x34,),
-            "²":            (0x35,),
-            ";":            (0x36,),
-            ":":            (0x37,),
-            "=":            (0x38,),
-            "/":            (0x54,),
-            "*":            (0x55,),
-            "+":            (0x57,),
-            "<":            (0x64,),
-            "A":            (self.modifiers['Shift'], 0x14),
-            "B":            (self.modifiers['Shift'], 0x05),
-            "C":            (self.modifiers['Shift'], 0x06),
-            "D":            (self.modifiers['Shift'], 0x07),
-            "E":            (self.modifiers['Shift'], 0x08),
-            "F":            (self.modifiers['Shift'], 0x09),
-            "G":            (self.modifiers['Shift'], 0x0a),
-            "H":            (self.modifiers['Shift'], 0x0b),
-            "I":            (self.modifiers['Shift'], 0x0c),
-            "J":            (self.modifiers['Shift'], 0x0d),
-            "K":            (self.modifiers['Shift'], 0x0e),
-            "L":            (self.modifiers['Shift'], 0x0f),
-            "M":            (self.modifiers['Shift'], 0x33),
-            "N":            (self.modifiers['Shift'], 0x11),
-            "O":            (self.modifiers['Shift'], 0x12),
-            "P":            (self.modifiers['Shift'], 0x13),
-            "Q":            (self.modifiers['Shift'], 0x04),
-            "R":            (self.modifiers['Shift'], 0x15),
-            "S":            (self.modifiers['Shift'], 0x16),
-            "T":            (self.modifiers['Shift'], 0x17),
-            "U":            (self.modifiers['Shift'], 0x18),
-            "V":            (self.modifiers['Shift'], 0x19),
-            "W":            (self.modifiers['Shift'], 0x1d),
-            "X":            (self.modifiers['Shift'], 0x1b),
-            "Y":            (self.modifiers['Shift'], 0x1c),
-            "Z":            (self.modifiers['Shift'], 0x1a),
-            "?":            (self.modifiers['Shift'], 0x10),
-            "1":            (self.modifiers['Shift'], 0x1e),
-            "2":            (self.modifiers['Shift'], 0x1f),
-            "3":            (self.modifiers['Shift'], 0x20),
-            "4":            (self.modifiers['Shift'], 0x21),
-            "5":            (self.modifiers['Shift'], 0x22),
-            "6":            (self.modifiers['Shift'], 0x23),
-            "7":            (self.modifiers['Shift'], 0x24),
-            "8":            (self.modifiers['Shift'], 0x25),
-            "9":            (self.modifiers['Shift'], 0x26),
-            "0":            (self.modifiers['Shift'], 0x27),
-            "°":            (self.modifiers['Shift'], 0x2d),
-            "_":            (self.modifiers['Shift'], 0x2e),
-            "¨":            ((self.modifiers['Shift'], 0x2f), (0x00, 0x00), (self.modifiers['Shift'], 0x2f)),
-            "£":            (self.modifiers['Shift'], 0x31),
-            "%":            (self.modifiers['Shift'], 0x34),
-            "³":            (self.modifiers['Shift'], 0x35),
-            ".":            (self.modifiers['Shift'], 0x36),
-            ">":            (self.modifiers['Shift'], 0x64),
-            "\\":           (self.modifiers['AltGr'], 0x64),
-            "|":            (self.modifiers['AltGr'], 0x1e),
-            "@":            (self.modifiers['AltGr'], 0x1f),
-            "#":            (self.modifiers['AltGr'], 0x20),
-            "¼":            (self.modifiers['AltGr'], 0x21),
-            "½":            (self.modifiers['AltGr'], 0x22),
-            "{":            (self.modifiers['AltGr'], 0x26),
-            "}":            (self.modifiers['AltGr'], 0x27),
-            "[":            (self.modifiers['AltGr'], 0x2f),
-            "]":            (self.modifiers['AltGr'], 0x30),
-            "€":            (self.modifiers['AltGr'], 0x08),
+            "a":            (0x14,), # ok
+            "b":            (0x05,), # ok
+            "c":            (0x06,), # ok
+            "d":            (0x07,), # ok
+            "e":            (0x08,), # ok
+            "f":            (0x09,), # ok
+            "g":            (0x0a,), # ok
+            "h":            (0x0b,), # ok
+            "i":            (0x0c,), # ok
+            "j":            (0x0d,), # ok
+            "k":            (0x0e,), # ok
+            "l":            (0x0f,), # ok
+            "m":            (0x33,), # ok
+            "n":            (0x11,), # ok
+            "o":            (0x12,), # ok
+            "p":            (0x13,), # ok
+            "q":            (0x04,), # ok
+            "r":            (0x15,), # ok
+            "s":            (0x16,), # ok
+            "t":            (0x17,), # ok
+            "u":            (0x18,), # ok
+            "v":            (0x19,), # ok
+            "w":            (0x1d,), # ok
+            "x":            (0x1b,), # ok
+            "y":            (0x1c,), # ok
+            "z":            (0x1a,), # ok
+            ",":            (0x10,), # ok
+            "&":            (0x1e,), # ok
+            "é":            (0x1f,), # ok
+            '"':            (0x20,), # ok
+            "'":            (0x21,), # ok
+            "(":            (0x22,), # ok
+            "§":            (0x23,), # ok
+            "è":            (0x24,), # ok
+            "!":            (0x25,), # ok
+            "ç":            (0x26,), # ok
+            "à":            (0x27,), # ok
+            ")":            (0x2d,), # ok
+            "-":            (0x2e,), # ok
+            "^":            ((0x2f,), (0x00,), (0x2f,)), # ok
+            "$":            (0x30,), # ok
+            "µ":            (0x31,), # ok
+            "ù":            (0x34,), # ok
+            "²":            (0x35,), # ok
+            ";":            (0x36,), # ok
+            ":":            (0x37,), # ok
+            "=":            (0x38,), # ok
+            "/":            (0x54,), # ok
+            "*":            (0x55,), # ok
+            "+":            (0x57,), # ok
+            "<":            (0x64,), # ok
+            "A":            (self.modifiers['Shift'], 0x14), # ok
+            "B":            (self.modifiers['Shift'], 0x05), # ok
+            "C":            (self.modifiers['Shift'], 0x06), # ok
+            "D":            (self.modifiers['Shift'], 0x07), # ok
+            "E":            (self.modifiers['Shift'], 0x08), # ok
+            "F":            (self.modifiers['Shift'], 0x09), # ok
+            "G":            (self.modifiers['Shift'], 0x0a), # ok
+            "H":            (self.modifiers['Shift'], 0x0b), # ok
+            "I":            (self.modifiers['Shift'], 0x0c), # ok
+            "J":            (self.modifiers['Shift'], 0x0d), # ok
+            "K":            (self.modifiers['Shift'], 0x0e), # ok
+            "L":            (self.modifiers['Shift'], 0x0f), # ok
+            "M":            (self.modifiers['Shift'], 0x33), # ok
+            "N":            (self.modifiers['Shift'], 0x11), # ok
+            "O":            (self.modifiers['Shift'], 0x12), # ok
+            "P":            (self.modifiers['Shift'], 0x13), # ok
+            "Q":            (self.modifiers['Shift'], 0x04), # ok
+            "R":            (self.modifiers['Shift'], 0x15), # ok
+            "S":            (self.modifiers['Shift'], 0x16), # ok
+            "T":            (self.modifiers['Shift'], 0x17), # ok
+            "U":            (self.modifiers['Shift'], 0x18), # ok
+            "V":            (self.modifiers['Shift'], 0x19), # ok
+            "W":            (self.modifiers['Shift'], 0x1d), # ok
+            "X":            (self.modifiers['Shift'], 0x1b), # ok
+            "Y":            (self.modifiers['Shift'], 0x1c), # ok
+            "Z":            (self.modifiers['Shift'], 0x1a), # ok
+            "?":            (self.modifiers['Shift'], 0x10), # ok
+            "1":            (self.modifiers['Shift'], 0x1e), # ok
+            "2":            (self.modifiers['Shift'], 0x1f), # ok
+            "3":            (self.modifiers['Shift'], 0x20), # ok
+            "4":            (self.modifiers['Shift'], 0x21), # ok
+            "5":            (self.modifiers['Shift'], 0x22), # ok
+            "6":            (self.modifiers['Shift'], 0x23), # ok
+            "7":            (self.modifiers['Shift'], 0x24), # ok
+            "8":            (self.modifiers['Shift'], 0x25), # ok
+            "9":            (self.modifiers['Shift'], 0x26), # ok
+            "0":            (self.modifiers['Shift'], 0x27), # ok
+            "°":            (self.modifiers['Shift'], 0x2d), # ok
+            "_":            (self.modifiers['Shift'], 0x2e), # ok
+            "¨":            ((self.modifiers['Shift'], 0x2f), (0x00, 0x00), (self.modifiers['Shift'], 0x2f)), # ok
+            "£":            (self.modifiers['Shift'], 0x31), # ok
+            "%":            (self.modifiers['Shift'], 0x34), # ok
+            "³":            (self.modifiers['Shift'], 0x35), # ok
+            ".":            (self.modifiers['Shift'], 0x36), # ok
+            ">":            (self.modifiers['Shift'], 0x64), # ok
+            "\\":           (self.modifiers['AltGr'], 0x64), # ok
+            "|":            (self.modifiers['AltGr'], 0x1e), # ok
+            "@":            (self.modifiers['AltGr'], 0x1f), # ok
+            "#":            (self.modifiers['AltGr'], 0x20), # ok
+            "¼":            (self.modifiers['AltGr'], 0x21), # ok
+            "½":            (self.modifiers['AltGr'], 0x22), # ok
+            "{":            (self.modifiers['AltGr'], 0x26), # ok
+            "}":            (self.modifiers['AltGr'], 0x27), # ok
+            "[":            (self.modifiers['AltGr'], 0x2f), # ok
+            "]":            (self.modifiers['AltGr'], 0x30), # ok
+            "€":            (self.modifiers['AltGr'], 0x08), # ok
             "”":            (self.modifiers['AltGr'], 0x05),
             "“":            (self.modifiers['AltGr'], 0x19),
             "¢":            (self.modifiers['AltGr'], 0x00),
@@ -210,7 +210,7 @@ class KeyboardLayoutBE:
             "ł":            (self.modifiers['AltGr'], 0x0f),
             "─":            (self.modifiers['AltGr'], 0x36),
             "·":            (self.modifiers['AltGr'], 0x37),
-            " ":            (0x00, 0x2c),
+            " ":            (0x00, 0x2c), # ok
             "    ":         (0x00, 0x2b),
             "ä":            ((self.modifiers['Shift'], 0x2f), (0x00, 0x14)),
             "ë":            ((self.modifiers['Shift'], 0x2f), (0x00, 0x08)),
