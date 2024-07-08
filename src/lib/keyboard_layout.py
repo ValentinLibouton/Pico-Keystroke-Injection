@@ -183,9 +183,9 @@ class KeyboardLayoutBE:
             "[":            (self.modifiers['AltGr'], 0x2f), # ok
             "]":            (self.modifiers['AltGr'], 0x30), # ok
             "€":            (self.modifiers['AltGr'], 0x08), # ok
-            "”":            (self.modifiers['AltGr'], 0x05), # no...
-            "“":            (self.modifiers['AltGr'], 0x19), # no...
-            "¢":            (self.modifiers['AltGr'], 0x00), # no...
+            "“":            (self.modifiers['AltGr'], 0x05), # ok
+            "„":            (self.modifiers['AltGr'], 0x19), # ok
+            "¢":            (self.modifiers['AltGr'], 0x06), # ok
             "»":            (self.modifiers['AltGr'], 0x1b), # ok
             "«":            (self.modifiers['AltGr'], 0x1d), # ok
             "`":            ((self.modifiers['AltGr'], 0x31), (0x00, 0x00), (self.modifiers['AltGr'], 0x31)), # ok
@@ -208,8 +208,8 @@ class KeyboardLayoutBE:
             "ħ":            (self.modifiers['AltGr'], 0x0b), # ok
             "ĸ":            (self.modifiers['AltGr'], 0x0e), # ok
             "ł":            (self.modifiers['AltGr'], 0x0f), # ok
-            "─":            (self.modifiers['AltGr'], 0x36), # no...
-            "·":            (self.modifiers['AltGr'], 0x37), # no...
+            "•":            (self.modifiers['AltGr'], 0x36), # ok
+            "·":            (self.modifiers['AltGr'], 0x37), # ok
             " ":            (0x2c,), # ok
             "    ":         (0x2b,), # ok
             "ä":            ((self.modifiers['Shift'], 0x2f), (0x14,)), # ok
@@ -231,31 +231,31 @@ class KeyboardLayoutBE:
             "Ḧ":            ((self.modifiers['Shift'], 0x2f), (self.modifiers['Shift'], 0x0b)), # ok
             "Ẅ":            ((self.modifiers['Shift'], 0x2f), (self.modifiers['Shift'], 0x1d)), # ok
             "Ẍ":            ((self.modifiers['Shift'], 0x2f), (self.modifiers['Shift'], 0x1b)), # ok
-            "â":            ((0x2f,), (0x14,)),
-            "ẑ":            ((0x2f,), (0x1a,)),
-            "ê":            ((0x2f,), (0x08,)),
-            "ŷ":            ((0x2f,), (0x1c,)),
-            "û":            ((0x2f,), (0x18,)),
-            "î":            ((0x2f,), (0x0c,)),
-            "ô":            ((0x2f,), (0x12,)),
-            "ŝ":            ((0x2f,), (0x16,)),
-            "ĝ":            ((0x2f,), (0x0a,)),
-            "ĥ":            ((0x2f,), (0x0b,)),
-            "ĵ":            ((0x2f,), (0x0d,)),
-            "ŵ":            ((0x2f,), (0x1d,)),
-            "ĉ":            ((0x2f,), (0x06,)),
-            "Â":            ((0x2f,), (self.modifiers['Shift'], 0x14)),
-            "Ê":            ((0x2f,), (self.modifiers['Shift'], 0x08)),
-            "Ŷ":            ((0x2f,), (self.modifiers['Shift'], 0x1c)),
-            "Û":            ((0x2f,), (self.modifiers['Shift'], 0x18)),
-            "Î":            ((0x2f,), (self.modifiers['Shift'], 0x0c)),
-            "Ô":            ((0x2f,), (self.modifiers['Shift'], 0x12)),
-            "Ŝ":            ((0x2f,), (self.modifiers['Shift'], 0x16)),
-            "Ĝ":            ((0x2f,), (self.modifiers['Shift'], 0x0a)),
-            "Ĥ":            ((0x2f,), (self.modifiers['Shift'], 0x0b)),
-            "Ĵ":            ((0x2f,), (self.modifiers['Shift'], 0x0d)),
-            "Ŵ":            ((0x2f,), (self.modifiers['Shift'], 0x1d)),
-            "Ĉ":            ((0x2f,), (self.modifiers['Shift'], 0x06)),
+            "â":            ((0x2f,), (0x14,)), # ok
+            "ẑ":            ((0x2f,), (0x1a,)), # ok
+            "ê":            ((0x2f,), (0x08,)), # ok
+            "ŷ":            ((0x2f,), (0x1c,)), # ok
+            "û":            ((0x2f,), (0x18,)), # ok
+            "î":            ((0x2f,), (0x0c,)), # ok
+            "ô":            ((0x2f,), (0x12,)), # ok
+            "ŝ":            ((0x2f,), (0x16,)), # ok
+            "ĝ":            ((0x2f,), (0x0a,)), # ok
+            "ĥ":            ((0x2f,), (0x0b,)), # ok
+            "ĵ":            ((0x2f,), (0x0d,)), # ok
+            "ŵ":            ((0x2f,), (0x1d,)), # ok
+            "ĉ":            ((0x2f,), (0x06,)), # ok
+            "Â":            ((0x2f,), (self.modifiers['Shift'], 0x14)), # ok
+            "Ê":            ((0x2f,), (self.modifiers['Shift'], 0x08)), # ok
+            "Ŷ":            ((0x2f,), (self.modifiers['Shift'], 0x1c)), # ok
+            "Û":            ((0x2f,), (self.modifiers['Shift'], 0x18)), # ok
+            "Î":            ((0x2f,), (self.modifiers['Shift'], 0x0c)), # ok
+            "Ô":            ((0x2f,), (self.modifiers['Shift'], 0x12)), # ok
+            "Ŝ":            ((0x2f,), (self.modifiers['Shift'], 0x16)), # ok
+            "Ĝ":            ((0x2f,), (self.modifiers['Shift'], 0x0a)), # ok
+            "Ĥ":            ((0x2f,), (self.modifiers['Shift'], 0x0b)), # ok
+            "Ĵ":            ((0x2f,), (self.modifiers['Shift'], 0x0d)), # ok
+            "Ŵ":            ((0x2f,), (self.modifiers['Shift'], 0x1d)), # ok
+            "Ĉ":            ((0x2f,), (self.modifiers['Shift'], 0x06)), # ok
         }
 
     def type_character(self, character):
